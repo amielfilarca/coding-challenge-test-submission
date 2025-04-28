@@ -11,10 +11,11 @@ code {
 }
 
 /* TODO: Add the 'Roboto' font from Google fonts and add it as a global CSS var called `--font-primary` */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* TODO: Make application responsive. It is already for the most part, but it is not optimal for smaller screens.
 * - Making the application responsive using the Mobile First principle.
 */
-
 :root {
   --border-radius-default: 4px;
   --border-radius-xl: 15px;
@@ -24,9 +25,11 @@ code {
   --color-brand: #413ef7;
   --color-text: #141925;
   --color-text-light: #72787d;
-  --width-input: 20rem;
-  --width-content: 30rem;
+  --width-input: 100%;
+  --width-content: 100%;
+  --font-primary: 'Roboto', sans-serif;
 }
+
 
 * {
   box-sizing: border-box;
@@ -40,7 +43,7 @@ body {
 }
 
 main {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 small {
@@ -53,7 +56,7 @@ fieldset {
   border: none;
   border-bottom: 1px solid var(--color-accent);
   border-top: 1px solid var(--color-accent);
-  margin: 2rem 0;
+  margin: 1rem 0;
   max-width: var(--width-input);
   padding: 1rem 0;
   width: 100%;
@@ -61,4 +64,19 @@ fieldset {
 
 legend {
   color: var(--color-text-light);
+}
+
+@media (min-width: 600px) {
+  :root {
+    --width-input: 20rem;
+    --width-content: 30rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  fieldset {
+    margin: 2rem 0;
+  }
 }

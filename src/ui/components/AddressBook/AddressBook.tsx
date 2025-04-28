@@ -36,6 +36,7 @@ const AddressBook = () => {
                   </div>
                   <div className={$.remove}>
                     <Button
+                      loading={loading}
                       variant="secondary"
                       onClick={() => removeAddress(address.id)}
                     >
